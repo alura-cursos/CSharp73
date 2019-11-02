@@ -6,7 +6,7 @@ namespace CSharp73_novidades
 {
     static class TesteTuples
     {
-        public static void TestaTuple()
+        public static void TestaIgualdade()
         {
             var origem = ("Avenida Paulista", "900", "São Paulo");
             var destino = ("Avenida Paulista", "300", "São Paulo");
@@ -21,8 +21,15 @@ namespace CSharp73_novidades
             Console.WriteLine(mesmoLugar);
         }
 
+        public static void TestaIgualdade2()
+        {
+            var origem = (rua: "Avenida Paulista", numero: "900", cidade: "São Paulo");
+            var destino = (numero: "900", rua: "Avenida Paulista", cidade: "São Paulo");
 
+            var mesmoLugar = origem == destino;
 
+            Console.WriteLine(mesmoLugar);
+        }
 
 
     }
