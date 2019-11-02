@@ -31,6 +31,14 @@ namespace CSharp73_novidades
             Console.WriteLine(mesmoLugar);
         }
 
+        public static void MaisAlgunsCasos()
+        {
+            var ehIgual = (nome: "Pedro", idade: 15) == (nome: "Maria", idade: 12);
 
+            (string, int) pedro = (nome: "Pedro", idade: 15);
+            (string, int?) maria = (nome: "Maria", idade: 12);
+
+            Console.WriteLine(pedro == maria);
+        }
     }
 }
