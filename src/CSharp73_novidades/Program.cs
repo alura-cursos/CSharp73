@@ -6,7 +6,7 @@ namespace CSharp73_novidades
     {
         static void Main(string[] args)
         {
-            TesteTuples.TestaIgualdade2();
+            ReatribuicaoEmRefs.TestaRefs();
 
 
             Console.WriteLine("Fim de execução");
