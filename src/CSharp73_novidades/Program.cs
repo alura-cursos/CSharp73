@@ -6,7 +6,7 @@ namespace CSharp73_novidades
     {
         static void Main(string[] args)
         {
-            ReatribuicaoEmRefs.TestaRefs();
+            BackfieldAttribute.Testa();
 
 
             Console.WriteLine("Fim de execução");
