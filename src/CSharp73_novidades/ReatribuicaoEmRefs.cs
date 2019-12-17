@@ -64,13 +64,4 @@ namespace CSharp73_novidades
             return false;
         }
     }
-
-
-
-
-
-
-
-
-
 }

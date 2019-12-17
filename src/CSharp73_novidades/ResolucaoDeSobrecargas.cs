@@ -9,7 +9,7 @@ namespace CSharp73_novidades
         public void TestaSobreCarga()
         {
             this.EscreveMensagem(null);
-            ResolucaoDeSobrecargas.EscreveMensagem(null);
+            DeInstanciaOuEstatico.EscreveMensagem(null);
         }
 
         public void EscreveMensagem(StringBuilder stringBuilder)
@@ -42,8 +42,20 @@ namespace CSharp73_novidades
         }
     }
 
+    class MelhoriaEmSobrecargaDeDelegates
+    {
+        void Teste()
+        {
+            TestaDelegate(int.Parse);
+            TestaDelegate(EscreveMensagem);
+        }
 
+        public void TestaDelegate(Func<string, int> func) =>
+            Console.WriteLine("Func<string, int>");
 
+        public void TestaDelegate(Action<string> action) =>
+            Console.WriteLine("Action<string>");
 
-
+        public void EscreveMensagem(string a) => Console.WriteLine(a);
+    }
 }
