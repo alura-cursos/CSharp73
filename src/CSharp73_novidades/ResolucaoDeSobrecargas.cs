@@ -22,4 +22,28 @@ namespace CSharp73_novidades
             Console.WriteLine(mensagem);
         }
     }
+
+
+    class MelhoriaEmSobrecargaDeMetodoGenerico
+    {
+        void TestaMelhoria()
+        {
+            EscreveMensagem("mensagem", 2);
+        }
+
+        public void EscreveMensagem<T>(T objeto, int numero) where T : IDisposable
+        {
+            Console.WriteLine(objeto);
+        }
+
+        public void EscreveMensagem<T>(T objeto, short numero)
+        {
+            Console.WriteLine(objeto);
+        }
+    }
+
+
+
+
+
 }
